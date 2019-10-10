@@ -131,9 +131,9 @@ mysqli_select_db($link, "schimbvalutar");
    <th>ID</th>
    <td><input type = "textbox" name = "ID"></td> -->
     <th>Nume</th>
-	<br><td><input type = "textbox" name ="NUME"></td>
+	<br><td><input type = "textbox" name ="NUME" pattern="[A-Za-z]"></td>
     <th>CNP</th>
-	<td><input type = "textbox" name= "CNP"></td>
+	<td><input type = "textbox" name= "CNP" pattern="[0-9]{13}"></td>
 	<th>Data:</th>
    <td><input type = "date" name ="Data"></td>
    <th>Tip:</th>
@@ -152,7 +152,7 @@ while($row = mysqli_fetch_array($result))
 ?>
    </td>
    <th>Suma:</th>
-   <td><input type = "textbox" name ="SUMA"></td>
+   <td><input type = "textbox" name ="SUMA" pattern="[0-9]"></td>
 </table>
 <br><input type = "submit" value = "Trimite!">
 </form>
