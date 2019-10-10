@@ -70,13 +70,13 @@ $vinde = ($_POST['SUMA']/($r['Vanzare']));
 
 //update valuta
 $m = "UPDATE valuta
-SET Sold_Final = (Sold_Final- '".$_POST['SUMA']."')
+SET Sold_Final = (Sold_Final- $vinde)
 WHERE Denumire = '".$_POST['ID_V']."'";
 mysqli_query($link,$m);
 
 // update lei
 $c = "UPDATE valuta
-SET Sold_Final = (Sold_Final + $vinde)
+SET Sold_Final = (Sold_Final + '".$_POST['SUMA']."')
 WHERE id_valuta = 6";
 mysqli_query($link,$c);
 
@@ -89,12 +89,12 @@ $f = mysqli_fetch_array($s);
 $z = $f['Denumire'];
 
 
-echo "De primit:  ";
+echo '<span style="color:green;text-align:center;">De primit: </span>';
 echo $_POST['SUMA']." ";
 echo " RON <br>";
 
 
-echo "De dat:  ";
+echo '<span style="color:red;text-align:center;">De dat: </span>';
 echo " ".round($vinde,2);
 echo " ".$z;
 
@@ -132,12 +132,12 @@ $o = mysqli_query($link,$h);
 $p = mysqli_fetch_array($o);
 $u = $p['Denumire'];
 
-echo "De primit:  ";
+echo '<span style="color:green;text-align:center;">De primit: </span>';
 echo $_POST['SUMA']." ";
 echo $u."<br>";
 
 
-echo "De dat:  ";
+echo '<span style="color:red;text-align:center;">De dat: </span>';
 echo round($cump,2);
 echo " RON";
 

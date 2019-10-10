@@ -78,14 +78,14 @@ th {
 
   <div style="position: absolute; top: 40%; right:10%;">
  <form action = "script1.php" method = "POST">
- <h3><font color ="green">Introduceti numele: <input type = "textbox" name = "Nume">
+ <h3><font color ="green">Introduceti numele: <input type = "text" name = "Nume" pattern="[A-Za-z ]{3,50}">
  <center><br><input type = "submit" value = "Trimite!"><center>
   
   </div>
   
   <div style="position: absolute; top: 40%; left:25%;">
   <form action = "script1.php" method = "POST">
-<h3><font color ="green"> Introduceti CNP-ul: <input type = "textbox" name = "CNP">
+<h3><font color ="green"> Introduceti CNP-ul: <input type = "textbox" name = "CNP" pattern="[0-9]{13}">
  <center><br><input type = "submit" value = "Trimite!"><center>
  
  </div>

@@ -89,10 +89,10 @@ legend {
 <fieldset>
 <legend>Adaugare monede</legend>
 <form action = "adaugaM.php" method = "POST" text align = "center">
-Denumire moneda : <input type = "textbox" name = "denumire"><br>
-Sold : <input type = "textbox" name = "sold"><br>
-Curs vanzare (RON): <input type = "textbox" name = "cursv"><br>
-Curs cumparare (RON): <input type = "textbox" name = "cursc"><br>
+Denumire moneda : <input type = "text" name = "denumire" pattern="[A-Z]{3}"><br>
+Sold : <input type = "textbox" name = "sold"pattern="[0-9]{1,999999999999999}"><br>
+Curs vanzare (RON): <input type="number" required name="cursv" min="0" value="0" step=".01"><br>
+Curs cumparare (RON): <input type="number" required name="cursc" min="0" value="0" step=".01"><br>
 Data: <input type = "date" name = "data"><br>
 <center><input type = "submit" value = "Trimite!"></center>
 </select>

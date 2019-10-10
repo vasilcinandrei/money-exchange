@@ -108,7 +108,7 @@ while($row= mysqli_fetch_array($result))
  
 <br><fieldset>
 <form action = "strtranz.php" method = "POST">
-ID Tranzactie: <input type = "textbox" name ="ID_T"><br>
+ID Tranzactie: <input type = "textbox"  name ="ID_T" pattern="[0-9]{1,1000000000000000000}"><br>
 <input type="submit" value = "Trimite!">
 </form>
 </fieldset>
