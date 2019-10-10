@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Evidenta</title>
+<title>SCHIMB VALUTAR</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -131,15 +131,15 @@ mysqli_select_db($link, "schimbvalutar");
    <th>ID</th>
    <td><input type = "textbox" name = "ID"></td> -->
     <th>Nume</th>
-	<br><td><input type = "text" name ="NUME" pattern="[A-Za-z ]{3,50}"></td>
+	<br><td><input type = "text" name ="NUME" required pattern="[A-Za-z ]{3,50}"></td>
     <th>CNP</th>
-	<td><input type = "text" name= "CNP" pattern="[0-9]{13}"></td>
+	<td><input type = "text" name= "CNP" required pattern="[0-9]{13}"></td>
 	<th>Data:</th>
-   <td><input type = "date" name ="Data"title = "data"></td>
+   <td><input type = "date" name ="Data" required title = "data"></td>
    <th>Tip:</th>
    <td>
-   <input type="checkbox" name="TIP" value= "Cumparare" >Cumparare</td>
-   <td><input type="checkbox" name="TIP" value=" Vanzare" > Vanzare</td>
+   <input type="checkbox" name="TIP"  value= "Cumparare" >Cumparare</td>
+   <td><input type="checkbox" name="TIP"  value=" Vanzare" > Vanzare</td>
    <th>ID Valuta:</th>
    <td><select name = "ID_V">
     <?php
@@ -152,33 +152,10 @@ while($row = mysqli_fetch_array($result))
 ?>
    </td>
    <th>Suma:</th>
-   <td><input type = "number" name ="SUMA"></td>
+   <td><input type = "number" min="0" name ="SUMA"></td>
 </table>
 <br><input type = "submit" value = "Trimite!">
 </form>
-</html>
-
-
-<br><fieldset>
-<legend>Convertor</legend>
-<form action = "convertor.php" method = "POST">
-
-Suma:<input type = "textbox" name ="SUMA"><br>
-Valuta <input type="checkbox" name="TIP" value= "Cumparare" ><br>
-Lei <input type="checkbox" name="TIP" value=" Vanzare" > <br>
- ID Valuta:<select name = "ID_V">
- <?php
-$q = "SELECT Denumire, id_valuta FROM valuta";
-$result = mysqli_query($q);
-while($row = mysqli_fetch_array($result))
-	echo '<option>'.$row['Denumire'].'</option>';
-?>
-</select>
-<input type="submit" value = "Trimite!">
-</form>
-</fieldset>
-
-
 </div>
 
 <script>

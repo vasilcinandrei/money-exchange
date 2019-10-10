@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Evidenta</title>
+<title>SCHIMB VALUTAR</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -107,7 +107,7 @@ mysqli_select_db($link,"schimbvalutar");
  <tr>
     <th>Suma</th></tr>
 	<tr>
-	<td><input type = "textbox" name= "val"></td></tr>
+	<td><input type = "number" min="0" step=".01" name= "val"></td></tr>
 	<tr>
 	<th>Data:</th></tr>
 	<tr>
@@ -144,7 +144,7 @@ mysqli_select_db($link,"schimbvalutar");
  <tr>
     <th>Suma</th></tr>
 	<tr>
-	<td><input type = "textbox" name= "val"></td></tr>
+	<td><input type = "number" min="0" step=".01" name= "val"></td></tr>
 	<tr>
 	<th>Data:</th></tr>
 	<tr>
