@@ -87,7 +87,7 @@ legend {
  
  
 <fieldset>
-<legend>Adaugare moneda</legend>
+<legend>Adaugare monede</legend>
 <form action = "adaugaM.php" method = "POST" text align = "center">
 Denumire moneda : <input type = "textbox" name = "denumire"><br>
 Sold : <input type = "textbox" name = "sold"><br>
